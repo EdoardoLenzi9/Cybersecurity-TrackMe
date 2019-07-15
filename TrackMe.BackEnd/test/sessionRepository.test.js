@@ -41,12 +41,12 @@ var readBySessionTest = function(){
 }
 
 
-//setTimeout(repo.drop, 1000);
-//setTimeout(repo.sync, 1000);
-//setTimeout(createTest, 1000);
-//setTimeout(uniqueTest, 1000);
-//setTimeout(createLogicTest, 1000);
-//setTimeout(readBySessionTest, 1000);
+setTimeout(repo.drop, 1000);
+setTimeout(repo.sync, 1000);
+setTimeout(createTest, 1000);
+setTimeout(uniqueTest, 1000);
+setTimeout(createLogicTest, 1000);
+setTimeout(readBySessionTest, 1000);
 
 
 module.exports = {

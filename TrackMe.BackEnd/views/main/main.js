@@ -39,7 +39,6 @@ function showPosition(position) {
 			   }
 
 	httpPostAsync( '/user/position', [["lat", coords.lat], ["lng", coords.lng], ["session", getSession()]], null, function(reply){
-		console.log(reply);
 		if(reply == 'error'){
 			attempts++;
 			if(attempts > 10){

@@ -36,10 +36,12 @@ var positionTest = function(){
     })
 }
 
-//setTimeout(signinTest, 1000);
-//setTimeout(validationTest, 1000);
-//setTimeout(loginTest, 1000);
-//setTimeout(positionTest, 1000);
+
+setTimeout(signinTest, 1000);
+setTimeout(validationTest, 1000);
+setTimeout(loginTest, 1000);
+setTimeout(positionTest, 1000);
+
 
 module.exports = {
     signinTest,

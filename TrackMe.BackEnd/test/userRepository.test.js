@@ -39,12 +39,12 @@ var readByCredentialsTest = function(){
 }
 
 
-//setTimeout(repo.drop, 1000);
-//setTimeout(repo.sync, 1000);
-//setTimeout(createTest, 1000);
-//setTimeout(verifyTest, 1000);
-//setTimeout(readByIdTest, 1000);
-//setTimeout(readByCredentialsTest, 1000);
+setTimeout(repo.drop, 1000);
+setTimeout(repo.sync, 1000);
+setTimeout(createTest, 1000);
+setTimeout(verifyTest, 1000);
+setTimeout(readByIdTest, 1000);
+setTimeout(readByCredentialsTest, 1000);
 
 
 
