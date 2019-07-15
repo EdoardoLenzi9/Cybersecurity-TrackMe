@@ -55,9 +55,9 @@ var position = function(lat, lng, session, callback){
 }
 
 
-var sendVerificationCode = function(code){
+var sendVerificationCode = function(mail, code){
     //console.log('verification code:' + code);
-    mailgun.send(code);
+    mailgun.send(mail, code);
 }
 
 

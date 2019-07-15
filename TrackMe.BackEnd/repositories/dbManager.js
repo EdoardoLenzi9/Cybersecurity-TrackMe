@@ -7,9 +7,9 @@
 
 
 var orm = require('orm');
-var envoriment = require('environment');
+var environment = require('../credentials/environment');
 
-var db = orm.connect(environment.database);
+var db = orm.connect(environment.db);
 
 
 db.on('connect', function(err) {
