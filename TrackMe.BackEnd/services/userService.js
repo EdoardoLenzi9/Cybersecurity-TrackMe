@@ -57,7 +57,8 @@ var position = function(lat, lng, session, callback){
 
 
 var sendVerificationCode = function(mail, code){
-    console.log(mail + ' Your verification code: ' + code);
+    console.log(' Your verification code: ' + code + " " + mail);
+    //mailgun unavailable due to trial API KEY restriction
     //mailgun.send(mail, code);
 }
 

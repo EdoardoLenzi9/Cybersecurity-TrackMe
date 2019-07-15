@@ -29,7 +29,6 @@ function signIn(){
 
 
 function logIn(){
-    alert("logIn");
     var mail = $('#login-mail')[0].value;
     var password = $('#login-password')[0].value;
     var credentials = encodeCredentials(mail, password);
@@ -55,6 +54,6 @@ function encodeCredentials(mail, password, username = null){
 
 
 var session = getSession();
-if(session != null){
+if(session != null && session != "null"){
     window.location.replace(window.location.origin + '/main');
 }

@@ -20,6 +20,7 @@ router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 let allowedRoutes = new Set();
 allowedRoutes.add('/login');
 allowedRoutes.add('/user');
+allowedRoutes.add('/user/login');
 allowedRoutes.add('/user/verify');
 
 
