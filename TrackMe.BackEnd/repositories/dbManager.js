@@ -13,8 +13,8 @@ var db = orm.connect(environment.db);
 
 
 db.on('connect', function(err) {
-  if (err) return console.error('Connection error: ' + err);
-  console.log('db connection established')
+    if (err) return console.error('Connection error: ' + err);
+    console.log('db connection established')
 });
 
 

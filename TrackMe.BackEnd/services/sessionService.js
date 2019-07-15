@@ -27,6 +27,18 @@ var create = function(userId, callback){
 }
 
 
+var validateSession = function(session, callback){
+   sessionRepository.readBySession(session, function(res){
+        if(res.length == 1){
+            callback("ok");
+        } else {
+            callback("error");
+        }
+    });
+}
+
+
 module.exports = {
-    create
+    create,
+    validateSession
 }

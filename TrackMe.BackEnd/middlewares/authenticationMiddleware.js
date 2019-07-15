@@ -18,8 +18,18 @@ router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 
 router.use(function (req, res, next) {
-    sessionService.validateSession(req.session);
-    next();
+	console.log("Authentication middleware receive: " + req.method + " on url " + req.url)
+	if(req.method != 'GET'){
+		sessionService.validateSession(req.session, function(validation){
+			if(validation == "error"){
+				res.send("error");
+			} else{
+				next();
+			}
+		});
+	} else {
+		next();	
+	}
 });
 
 
