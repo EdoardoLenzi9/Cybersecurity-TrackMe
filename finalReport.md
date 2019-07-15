@@ -50,24 +50,32 @@ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 ```
 
 
-2. Create a file with your API KEY for the third party services used (Google API KEY, MailGun API KEY, MailGun Domain, DB connection string),
-(or a javascript script with the same properties)
+2. Create a file with your API KEYs for the third party services used (Google API KEY, MailGun API KEY, MailGun Domain, DB connection string)
 
-
+`projectCode/credentials/environment.js`:
 ```
-{
-    "maps" : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "db": "mongodb://db_user:db_password@host:port/db_name",
-    "mailgun_key": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "mailgun_domain": "XXXXXXXXXXXXXXXXXXXXXXXXXX.mailgun.org"
+var maps = "YOUR_GOOGLE_MAPS_API_KEY";
+var mail = "edoardolenzi9@gmail.com";
+var db = "mongodb://db_user:db_password@host:port/db_name";
+var mailgun_key = "78fdXXXXXXXXXXXXXXXXXXXXXXXXXXXXX7b3f";
+var mailgun_domain = "sandboxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.mailgun.org";
+
+
+module.exports = {
+    maps,
+    db,
+    mail,
+    mailgun_key,
+    mailgun_domain
 }
+
 ```
 
 
 3. Download node dependencies and start server:
 
 ```
-cd TrackMe.BackEnd
+cd projectCode
 npm install
 node index.js
 ```

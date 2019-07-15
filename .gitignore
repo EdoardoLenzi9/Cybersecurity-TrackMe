@@ -1,3 +1,4 @@
+*.log
 *.lock.json
 credentials/
 node_modules/
