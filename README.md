@@ -24,7 +24,7 @@ TrackMe is implemented in [nodeJs](https://nodejs.org/it/) and based on a three 
 	* Routing is supported by [express](https://expressjs.com/it/) middlewares (i.e. `authenticationMiddleware` for session validation)
 	* SQL injection is avoided using a no-SQL database (mongoDB) instance hosted on [mLab](https://mlab.com/home) servers and an [orm](https://www.npmjs.com/package/orm)
 	* Server API/static files are availble only using a HTTPS calls (for this mockup we create a self-signed SSL certificate with [openSSL](https://www.openssl.org/)
-	* Server is sand-boxed into a Docker container which allows on the one hand to protect the server process from the outside hostile environment and, on the other hand to scale (largely used for distributed systems) and be cross-platform
+	* Server is sand-boxed into a [Docker](https://www.docker.com/) container which allows on the one hand to protect the server process from the outside hostile environment and, on the other hand to scale (largely used for distributed systems) and be cross-platform
 
 
 ## Main features 
@@ -51,6 +51,8 @@ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 
 
 2. Create a file with your API KEY for the third party services used (Google API KEY, MailGun API KEY, MailGun Domain, DB connection string),
+(or a javascript script with the same properties)
+
 
 ```
 {
