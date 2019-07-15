@@ -1,0 +1,29 @@
+/*
+*  {  
+*    author = "edoardo lenzi"
+*    license = "GPL-3"
+*  }
+*/
+
+
+body{
+    background-color: #300a24;
+    width: 100%;
+    height: 100%;
+}
+
+
+.container-fluid{
+    margin-top: 30vh;
+}
+
+
+/*
+* Large devices
+*/
+@media not screen and (max-width: 40em)  {
+	body {
+        padding-left: 30vw;
+        padding-right: 30vw;
+  	}
+}

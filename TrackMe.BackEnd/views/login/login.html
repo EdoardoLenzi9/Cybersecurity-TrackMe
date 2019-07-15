@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta name="author" content="Edoardo Lenzi">
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="assets/favicon.ico"/>	
+		<link rel="stylesheet" href="/bootstrap3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/common/style.css">
+		<link rel="stylesheet" href="/login/login.css">
+	</head>
+	<body>
+		<div class="container-fluid white full-width-expansion">
+			<div id="title" class = "row center">
+				<h1 class="large">TrackMe</h1>
+			</div>
+			<div class = "row small">
+				<div class = "col-md-6">
+					<div class="form-group">
+						<input type="text" placeholder="Username" id="signin-username" class="form-control col-input">
+					</div>
+					<div class="form-group">
+							<input type="text" placeholder="Mail" id="signin-mail" class="form-control">
+						</div>
+					<div class="form-group">
+						<input type="password" placeholder="Password" id="signin-password" class="form-control" data-toggle="password">
+					</div>
+					<div class="form-group">
+						<button onclick="signIn()" class="btn btn-primary full-width-expansion">Sign in</button>
+					</div>
+				</div>
+				<div class = "col-md-6">
+					<div class="form-group">
+						<input type="text" placeholder="Mail" id="login-mail" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="password" placeholder="Password" id="login-password" class="form-control" data-toggle="password">
+					</div>
+					<div class="form-group">
+						<button onclick="logIn()" class="btn btn-primary full-width-expansion">Log in</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="/jquery/dist/jquery.min.js"></script>
+	<script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="/login/bootstrap-show-password.min.js"></script>
+	<script src="/common/utils.js"></script>
+	<script src="/common/httpClient.js"></script>
+	<script src="/login/login.js"></script>
+</html>

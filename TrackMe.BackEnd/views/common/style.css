@@ -1,0 +1,76 @@
+/*
+*  {  
+*    author = "edoardo lenzi"
+*    license = "GPL-3"
+*  }
+*/
+
+
+.full-height{
+    height: 100vh;
+}
+
+
+.full-width-expansion{
+    width: 100%;
+}
+
+
+.full-width{
+    width: 100vh;
+}
+
+
+.full{
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.center{
+    text-align: center;
+}
+
+
+.white{
+    color: white
+}
+
+
+
+.small{
+    font-size: 1rem;
+}
+
+
+.medium{
+    font-size: 3rem;
+}
+
+
+.large{
+    font-size: 8rem;
+}
+
+
+/*
+* Small devices
+*/
+@media screen and (max-width: 40em) {
+	/* #menu is the original menu */
+	body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+  	}
+}
+
+
+/*
+* Large devices
+*/
+@media not screen and (max-width: 40em)  {
+	body {
+        padding-left: 10vw;
+        padding-right: 10vw;
+  	}
+}
