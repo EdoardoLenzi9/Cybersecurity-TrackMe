@@ -24,6 +24,7 @@ var create = function(username, mail, password, callback){
 
 
     userRepository.create(username, mail, encryptedPassword, function(newUser){
+        console.log(JSON.stringify(newUser));
         sendVerificationCode(newUser.verificationCode);
         sessionService.create(newUser.id, callback);
     });
@@ -56,12 +57,13 @@ var position = function(lat, lng, session, callback){
 
 
 var sendVerificationCode = function(mail, code){
-    //console.log('verification code:' + code);
-    mailgun.send(mail, code);
+    console.log(mail + ' Your verification code: ' + code);
+    //mailgun.send(mail, code);
 }
 
 
 var verify = function(session, code, callback){
+    console.log("\n\n " + session + " " + code + "  \n\n")
     sessionRepository.readBySession(session, function(res){
         userRepository.verify(res[0].user_id, code, callback);
     })

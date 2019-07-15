@@ -9,7 +9,6 @@ router.post("/user", function(req, res) {
 	log.log(req.headers.authorization.replace("Basic ", ""));
 	let buffer = Buffer.from(req.headers.authorization.replace("Basic ", ""), 'base64'); 
 	let authorization = buffer.toString('ascii');
-	log.log(authorization); 
 	var credentials = authorization.split("{:}");
 	if(credentials.length == 3){
 		var mail = credentials[0];
@@ -28,7 +27,6 @@ router.post("/user/login", function(req, res) {
 	log.log(req.headers.authorization.replace("Basic ", ""));
 	let buffer = Buffer.from(req.headers.authorization.replace("Basic ", ""), 'base64'); 
 	let authorization = buffer.toString('ascii');
-	log.log(authorization); 
 	var credentials = authorization.split("{:}");
 	if(credentials.length == 2){
 		var mail = credentials[0];

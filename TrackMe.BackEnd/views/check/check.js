@@ -7,6 +7,7 @@
 
 
 function warning(message){
+    console.error(message);
     alert(message);
 }
 
@@ -19,7 +20,7 @@ function verifyCode(){
         if(reply != 'error'){
             window.location.replace(window.location.origin + '/main');
         } else {
-            warning('Sign in failed');
+            warning('Code verification failed');
         }
     });
 }

@@ -5,6 +5,11 @@
 *  }
 */
 
+function warning(message){
+    console.error(message);
+    alert(message);
+}
+
 
 function openNav() {
   document.getElementById("sidenav").style.width = "250px";
@@ -26,6 +31,7 @@ function getLocation() {
 
 var map;
 var marker;
+var attempts = 0;
 
 function showPosition(position) {
   	var coords = {  lat: position.coords.latitude, 
@@ -35,7 +41,13 @@ function showPosition(position) {
 	httpPostAsync( '/user/position', [["lat", coords.lat], ["lng", coords.lng], ["session", getSession()]], null, function(reply){
 		console.log(reply);
 		if(reply == 'error'){
-			warning('Log in failed');
+			attempts++;
+			if(attempts > 10){
+				warning('Session expired');
+				attempts = 0;
+				window.location.replace(window.location.origin + '/login');
+				saveSession(null);
+			}
 		}
 	});  
 
@@ -52,4 +64,4 @@ function initMap() {
 }
   
 
-window.setInterval(getLocation, 1000);
+window.setInterval(getLocation, 2000);
