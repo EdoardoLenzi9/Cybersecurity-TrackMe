@@ -34,7 +34,7 @@
     "jquery": "^3.4.1",
     "mailgun-js": "^0.22.0",
     "mongodb": "^2.2.36",
-    "mysql": "^2.0.0-alpha8",
+    "mysql": "^2.14.0",
     "orm": "^5.0.4",
     "request": "^2.88.0"
   },
