@@ -31,7 +31,7 @@
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mailgun-js": "^0.22.0",
     "mongodb": "^2.2.36",
     "mysql": "^2.0.0-alpha8",
