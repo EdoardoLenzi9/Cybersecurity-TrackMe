@@ -33,7 +33,7 @@
     "fs": "0.0.1-security",
     "jquery": "^3.4.1",
     "mailgun-js": "^0.22.0",
-    "mongodb": "^2.2.36",
+    "mongodb": "^3.1.13",
     "mysql": "^2.0.0-alpha8",
     "orm": "^5.0.4",
     "request": "^2.88.0"
